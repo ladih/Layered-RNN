@@ -1,6 +1,7 @@
 # Layered-RNN
 
 A layered RNN that can be trained using BPTT.
+
 Specialized for text generation: takes one-hot encoded labels as input and output, and uses softmax activation.
 
 Purpose: wanted to learn how recurrent neural networks and backpropagation through time work.
