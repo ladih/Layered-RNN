@@ -80,7 +80,7 @@ class RNN():
                 bp = bp_y @ self.weightmatrices[-2*l-1].T + next_dhraws[-l-1] @ self.weightmatrices[-2*l-2].T # backprop through the hidden layers
                 bp_tanh = (1 - raws_t[t][-l-1] * raws_t[t][-l-1]) * bp # backprop through tanh
                 if t == 0:
-                    if hprevs == None: # if no hidden state before t=0 is given
+                    if hprevs == 0: # if no hidden state before t=0 is given
                         dWh = np.zeros_like(self.weightmatrices[-2*l-2])
                     else:
                         dWh = hprevs[-l-1].T @ bp_tanh
