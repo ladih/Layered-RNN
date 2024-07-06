@@ -33,8 +33,8 @@ class RNN():
     def step(self, inputs, targets, learning_rate, hprevs=0):
         """Forward and backpropagation step. Updates weights.
            inputs and targets should be a lists of one-hot encoded labels."""
-        inputs = [np.array(sublist).reshape(1, -1) for sublist in inputs] # just a type transformation
-        targets = [np.array(sublist).reshape(1, -1) for sublist in targets] #      --- \\ ---
+        inputs = [np.array(sublist).reshape(1, -1) for sublist in inputs] # reshape input
+        targets = [np.array(sublist).reshape(1, -1) for sublist in targets]   
 
         if hprevs == 0: # if no hidden states at t=-1 are given
             for i, s in enumerate(self.hidden_sizes):
