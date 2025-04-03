@@ -1,4 +1,4 @@
-text file that is used for the test script.
+text file that is used for the test script (used the code text)
 
 import numpy as np
 import matplotlib.pyplot as plt
